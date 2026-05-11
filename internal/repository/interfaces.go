@@ -3,12 +3,12 @@ package repository
 import (
 	"context"
 
-	"github.com/eomaxl/iban-lookup/internal/model"
+	"github.com/eomaxl/swift-lookup/internal/model"
 )
 
 type BICReader interface {
 	Search(ctx context.Context, req model.SearchRequest) ([]model.FinancialInstitution, int64, error)
-	FindByIbanCode(ctx context.Context, ibanCode string) (*model.FinancialInstitution, error)
+	FindBySwiftCode(ctx context.Context, swiftCode string) (*model.FinancialInstitution, error)
 }
 
 type BICWriter interface {

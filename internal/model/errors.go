@@ -14,7 +14,7 @@ var ErrSyncInProgress = errors.New("sync already in progress")
 
 var ErrSFTPConnection = errors.New("sftp connection failed")
 
-var ErrInvalidIbanCode = errors.New("invalid iban code format")
+var ErrInvalidSwiftCode = errors.New("invalid swift code format")
 
 var ErrRateLimitExceeded = errors.New("rate limit exceeded")
 

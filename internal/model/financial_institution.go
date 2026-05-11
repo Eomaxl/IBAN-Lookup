@@ -29,7 +29,7 @@ const (
 
 type FinancialInstitution struct {
 	ID                 int64              `json:"id" db:"id"`
-	IbanCode           string             `json:"iban_code" db:"iban_code"`
+	SwiftCode          string             `json:"swift_code" db:"swift_code"`
 	BankCode           string             `json:"bank_code" db:"bank_code"`
 	CountryCode        string             `json:"country_code" db:"country_code"`
 	LocationCode       string             `json:"location_code" db: "location_code"`
@@ -55,5 +55,5 @@ func (fi *FinancialInstitution) IsPrimaryOffice() bool {
 }
 
 func (fi *FinancialInstitution) Is11Char() bool {
-	return len(fi.IbanCode) == 11
+	return len(fi.SwiftCode) == 11
 }

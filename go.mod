@@ -1,3 +1,3 @@
-module github.com/eomaxl/iban-lookup
+module github.com/eomaxl/swift-lookup
 
 go 1.25.5

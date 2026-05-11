@@ -27,7 +27,7 @@ type SyncResult struct {
 }
 
 type StagingRecord struct {
-	IbanCode        string     `json:"iban_code"`
+	SwiftCode       string     `json:"swift_code"`
 	InstitutionName string     `json:"institution_name"`
 	CountryCode     string     `json:"country_code"`
 	Address         string     `json:"address,omitempty"`
@@ -41,7 +41,7 @@ type StagingRecord struct {
 
 type HistoryEntry struct {
 	ID         int64     `json:"id" db:"id"`
-	IbanCode   string    `json:"iban_code" db:"iban_code"`
+	SwiftCode  string    `json:"swift_code" db:"swift_code"`
 	ChangeType string    `json:"change_type" db:"change_type"`
 	OldValues  string    `json:"old_values,omitempty" db:"old_values"`
 	NewValues  string    `json:"new_values,omitempty" db:"new_values"`
